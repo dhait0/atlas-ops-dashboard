@@ -14,20 +14,24 @@ export default function HomePage() {
 
       <div className="shell__content">
         <header className="hero">
-          <div className="hero__eyebrow">Atlas Ops / internal preview</div>
+          <div className="hero__eyebrow">Atlas Ops / Internal preview / Vista interna</div>
           <div className="hero__copy">
-            <h1>Operational visibility for a busy service team.</h1>
+            <h1>Operational dashboard</h1>
             <p>
-              A compact admin dashboard built with mock enterprise data, designed to show product
-              thinking, responsive UI, and clean structure without exposing real business logic.
+              English: A compact admin dashboard built with mock enterprise data, designed to show
+              product thinking and clear structure.
+            </p>
+            <p>
+              Español: Un panel administrativo compacto construido con datos simulados, pensado
+              para mostrar criterio de producto y una estructura clara.
             </p>
           </div>
           <div className="hero__actions">
             <button type="button" className="primary-button">
-              Review pipeline
+              Review / Revisar
             </button>
             <button type="button" className="secondary-button">
-              Export summary
+              Export / Exportar
             </button>
           </div>
         </header>
@@ -40,7 +44,10 @@ export default function HomePage() {
 
         <section className="content-grid">
           <div className="content-grid__main">
-            <Section title="Weekly trend" description="Mock throughput and response-time data.">
+            <Section
+              title="Weekly trend"
+              description="Tendencia semanal / Mock throughput and response-time data."
+            >
               <DashboardCard>
                 <div className="trend-panel">
                   <div className="trend-panel__axis">
@@ -61,7 +68,10 @@ export default function HomePage() {
               </DashboardCard>
             </Section>
 
-            <Section title="Service health" description="A simplified operational snapshot.">
+            <Section
+              title="Service health"
+              description="Estado del servicio / Simplified operational snapshot."
+            >
               <div className="health-grid">
                 {serviceHealth.map((item) => (
                   <DashboardCard key={item.name}>
@@ -79,7 +89,10 @@ export default function HomePage() {
           </div>
 
           <aside className="content-grid__side">
-            <Section title="Recent activity" description="Latest mock events from the ops queue.">
+            <Section
+              title="Recent activity"
+              description="Actividad reciente / Latest ops events."
+            >
               <DashboardCard>
                 <ul className="activity-list">
                   {activityItems.map((item) => (
@@ -95,7 +108,10 @@ export default function HomePage() {
               </DashboardCard>
             </Section>
 
-            <Section title="Priority projects" description="Work tracked for the next delivery cycle.">
+            <Section
+              title="Priority projects"
+              description="Proyectos prioritarios / Delivery-cycle planning."
+            >
               <div className="project-stack">
                 {projects.map((project) => (
                   <DashboardCard key={project.name}>
